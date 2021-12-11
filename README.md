@@ -32,6 +32,10 @@ yarn start
 - 공부 시간 측정
   ![공부 시간 측정](https://user-images.githubusercontent.com/22253556/145668860-c48b6de6-5a84-4a68-baae-2ebf33c71ef0.gif)
 
+### 공부 시간 통계
+
+![공부 시간 통계](https://user-images.githubusercontent.com/22253556/145669070-51dfdcf1-eb9a-4d1a-8edd-d06dd578fa05.png)
+
 ### 공부 내용
 
 - 공부 내용 기록
