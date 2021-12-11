@@ -1,0 +1,262 @@
+#root {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Roboto';
+}
+
+.rel {
+  position: relative;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.center {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-y {
+  display: flex;
+  align-items: center;
+}
+
+.center-col {
+  margin: auto 0;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.abs {
+  position: absolute;
+}
+
+.abs-center {
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.reset-css {
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit !important;
+  }
+
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ol,
+  ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-weight: normal !important;
+  }
+
+  ol,
+  ul {
+    list-style: none !important;
+  }
+
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+
+.click {
+  cursor: pointer;
+}
+
+.scrollbar {
+  /* custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #d6d6d6;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    background-clip: content-box;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #c5c5c5;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .is-hidden-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .is-hidden-tablet {
+    display: none;
+  }
+}
+
+.success-btn {
+  background-color: #52c41a !important;
+  border-color: #52c41a !important;
+  color: white !important;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 250px;
+  min-height: 250px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;
+}
+
+$spaceamounts: (
+  0,
+  0.25,
+  0.5,
+  0.75,
+  1,
+  1.25,
+  1.5,
+  1.75,
+  2
+); // Adjust this to include the pixel amounts you need.
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+@for $index from 1 through length($spaceamounts) {
+  $space: nth($spaceamounts, $index);
+
+  @each $side in $sides {
+    .m#{str-slice($side, 0, 1)}-#{$index - 1} {
+      margin-#{$side}: #{$space}rem !important;
+    }
+
+    .p#{str-slice($side, 0, 1)}-#{$index - 1} {
+      padding-#{$side}: #{$space}rem !important;
+    }
+  }
+
+  .ma-#{$index - 1} {
+    margin: #{$space}rem;
+  }
+
+  .pa-#{$index - 1} {
+    padding: #{$space}rem;
+  }
+}
+
+.trigger {
+  padding: 0 24px;
+  font-size: 18px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.primary {
+  color: #1890ff !important;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+
+.logo {
+  height: 32px;
+  margin: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
+.main {
+  overflow-y: auto;
+}
+.sider {
+  border-right: 1px solid #ddd;
+}
+
+.title {
+  font-family: 'Roboto';
+  font-weight: bold;
+  &.lg {
+    font-size: 2.5rem;
+  }
+
+  &.md {
+    font-size: 1.8rem;
+  }
+}
+
+.text {
+  font-family: 'Roboto';
+  &.lg {
+    font-size: 2.5rem;
+  }
+
+  &.md {
+    font-size: 1.8rem;
+  }
+}
+
+.time {
+  margin: 0;
+  padding: 0;
+  font-weight: lighter;
+  &.lg {
+    font-size: 5.3rem;
+  }
+
+  &.md {
+    font-size: 3.5rem;
+  }
+}
+
+.divider {
+  width: 1.5px;
+  height: 100%;
+  background-color: #ddd;
+}
+
+.card {
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}

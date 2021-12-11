@@ -1,0 +1,86 @@
+{
+  "name": "tutoring-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "^4.6.2",
+    "@craco/craco": "^6.1.2",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "antd": "^4.15.5",
+    "axios": "^0.21.1",
+    "dayjs": "^1.10.4",
+    "draft-js": "^0.11.7",
+    "draftjs-to-html": "^0.9.1",
+    "formik": "^2.2.6",
+    "formik-antd": "^2.0.1",
+    "html-to-draftjs": "^1.5.0",
+    "mobx": "^6.3.0",
+    "mobx-react-lite": "^3.2.0",
+    "nanoid": "^3.1.23",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-draft-wysiwyg": "^1.14.7",
+    "react-lite-yt-embed": "^1.2.6",
+    "react-query": "^3.16.0",
+    "react-router-dom": "^5.2.0",
+    "react-router-hash-link": "^2.4.3",
+    "react-scripts": "4.0.3",
+    "react-use": "^17.2.4",
+    "recharts": "^2.1.6",
+    "simple-peer": "^9.11.0",
+    "socket.io-client": "^2.4.0",
+    "styled-components": "^5.3.0",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1",
+    "yup": "^0.32.9"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "gen-env": "npx gen-env-types .env -o src/env.d.ts -e .",
+    "analyze": "source-map-explorer 'build/static/js/*.js'"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-typescript": "^7.13.0",
+    "@types/draftjs-to-html": "^0.8.0",
+    "@types/html-to-draftjs": "^1.4.0",
+    "@types/react-draft-wysiwyg": "^1.13.2",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/react-router-hash-link": "^2.4.0",
+    "@types/simple-peer": "^9.6.3",
+    "@types/socket.io-client": "^3.0.0",
+    "@types/styled-components": "^5.1.9",
+    "@types/yup": "^0.29.11",
+    "autoprefixer": "9",
+    "craco-less": "^1.17.1",
+    "node-sass": "5",
+    "postcss": "7",
+    "source-map-explorer": "^2.5.2"
+  }
+}
